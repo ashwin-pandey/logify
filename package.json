@@ -1,6 +1,6 @@
 {
   "name": "logify-node-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cross-service logging SDK with automatic request and correlation IDs.",
   "license": "MIT",
   "author": "Ashwin Pandey",
