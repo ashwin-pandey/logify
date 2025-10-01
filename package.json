@@ -1,5 +1,5 @@
 {
-  "name": "@logify/node-sdk",
+  "name": "logify-node-sdk",
   "version": "0.0.2",
   "description": "Cross-service logging SDK with automatic request and correlation IDs.",
   "license": "MIT",
