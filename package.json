@@ -1,0 +1,61 @@
+{
+  "name": "@logify/node-sdk",
+  "version": "0.0.1",
+  "description": "Cross-service logging SDK with automatic request and correlation IDs.",
+  "license": "MIT",
+  "author": "Ashwin Pandey",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwin-pandey/logify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashwin-pandey/logify/issues"
+  },
+  "homepage": "https://github.com/ashwin-pandey/logify#readme",
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/**",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "typecheck": "tsc -p tsconfig.esm.json --noEmit",
+    "example": "node examples/server.js",
+    "test": "node tests/smoke.test.js",
+    "clean": "rimraf dist",
+    "dev": "tsc -w -p tsconfig.esm.json",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "logging",
+    "logger",
+    "pino",
+    "loki",
+    "observability",
+    "correlation",
+    "request-id",
+    "ctid",
+    "tracing"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.19.19",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
