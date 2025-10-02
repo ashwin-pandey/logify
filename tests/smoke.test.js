@@ -18,7 +18,7 @@ function captureStdout(fn) {
   const logger = createLogger(config);
   const output = captureStdout(() => {
     runWithContext({ requestId: '11111111-1111-1111-1111-111111111111', ctid: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' }, () => {
-      logger.info('hello', { foo: 'bar' }, 'test.smoke');
+      logger.info('hello', { foo: 'bar', module: 'test.smoke' });
     });
   });
   const lines = output.trim().split('\n');
