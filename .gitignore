@@ -13,6 +13,8 @@ pnpm-debug.log*
 # Testing
 /coverage/
 /.nyc_output/
+src/**/*.test.ts
+src/**/*.spec.ts
 
 # Env files
 .env
